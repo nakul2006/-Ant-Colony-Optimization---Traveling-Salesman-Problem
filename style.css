@@ -1,0 +1,28 @@
+/* page layout */
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:#f0f2f3;color:#111}
+.app{max-width:1200px;margin:18px auto;padding:12px}
+header h1{margin:0;font-size:20px}
+.hint{margin:6px 0 12px;color:#444}
+
+/* canvas container */
+.canvas-wrap{position:relative;border-radius:12px;overflow:hidden;display:flex;justify-content:center}
+#canvas{width:1000px;height:640px;display:block;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:transparent}
+
+/* overlay UI (sits above canvas) */
+.overlay-ui{position:absolute;right:14px;top:12px;width:320px;background:rgba(255,255,255,0.88);backdrop-filter:blur(2px);padding:10px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.12)}
+.controls-row{display:flex;gap:6px;margin-bottom:8px}
+.overlay-ui button{padding:6px 8px;border-radius:6px;border:1px solid rgba(0,0,0,0.08);background:white;cursor:pointer}
+.sliders label{display:block;font-size:13px;margin:6px 0}
+.sliders input[type="range"]{width:100%;margin-top:6px}
+.sliders span{font-weight:600;margin-left:6px}
+.stats{display:flex;justify-content:space-between;font-size:13px;margin-top:8px;padding-top:8px;border-top:1px dashed rgba(0,0,0,0.05)}
+
+/* footer */
+footer{margin-top:12px;color:#555;font-size:13px}
+
+/* small responsive */
+@media (max-width:1080px){
+  #canvas{width:92vw;height:60vh}
+  .overlay-ui{width:260px}
+}
